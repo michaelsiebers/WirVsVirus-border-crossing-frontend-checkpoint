@@ -166,7 +166,7 @@ export default {
 
   },
   created: function() {
-    this.axios.post('http://localhost:8000/api/tour/show', {tourId: this.tourId})
+    this.axios.post('https://api.fastbordercrossing.org/api/tour/show', {tourId: this.tourId})
     .then((response) => {
       this.tourObj = response.data.tour
       if(this.tourObj) {

@@ -51,7 +51,7 @@ export default {
     }
   },
   created: function() {
-    this.axios.post('http://localhost:8000/api/healthcheck/show', {driverId: this.driverId})
+    this.axios.post('https://api.fastbordercrossing.org/api/healthcheck/show', {driverId: this.driverId})
     .then((response) => {
       this.healthcheckObj = response.data.healthchecks
     })
@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     setCheckpoint() {
-      this.axios.post('http://localhost:8000/api/healthcheck/add', {status: "OK", pkey_driver: this.driverId, pkey_guard: "15a914e5-ee8e-4135-9597-42a6ba9cb94f"})
+      this.axios.post('https://api.fastbordercrossing.org/api/healthcheck/add', {status: "OK", pkey_driver: this.driverId, pkey_guard: "46ebe22c-feeb-4ebd-af95-d459131a587a"})
       .then(() => {
         this.$router.push({name: 'home'}) 
       })
