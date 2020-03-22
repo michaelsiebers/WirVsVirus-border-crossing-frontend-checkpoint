@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     setCheckpoint() {
-      this.axios.post('http://localhost:8000/api/healthcheck/add', {status: "OK", pkey_driver: this.driverId, pkey_guard: "15a914e5-ee8e-4135-9597-42a6ba9cb94f"})
+      this.axios.post('http://localhost:8000/api/healthcheck/add', {status: "OK", pkey_driver: this.driverId, pkey_guard: "a0a10ffa-bec9-4ed8-871e-084218f300f3"})
       .then(() => {
         this.$router.push({name: 'home'}) 
       })
