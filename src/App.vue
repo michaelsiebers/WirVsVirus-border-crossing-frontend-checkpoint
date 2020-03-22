@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <ul class="nav">
+    <!--<ul class="nav">
       <li class="nav-item">
         <router-link class="nav-link active" :to="{ name: 'home'}">Home</router-link>
       </li>
+      <li class="nav-item">
+        <router-link class="nav-link" :to="{ name: 'driver'}">Driver</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" :to="{ name: 'FormPage'}">FormPage</router-link>
+      </li>
     </ul>
+    -->
     <router-view></router-view>
   </div>
 </template>
@@ -24,6 +30,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    
   }
 </style>
