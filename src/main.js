@@ -11,36 +11,60 @@ import NotFound from "./components/NotFound";
 
 Vue.use(VueRouter);
 
+
+
 const router = new VueRouter({
+
     routes: [{
             path: '/',
             name: 'home',
-            component: Home
+            component: Home,
+            title: 'Checkpoint | Fast Border Crossing',
+            meta: {
+                title: 'Checkpoint | Fast Border Crossing',
+            }
         },
         {
             path: '/scanner',
             name: 'scanner',
-            component: Scanner
+            component: Scanner,
+            meta: {
+                title: 'Scanner | Fast Border Crossing',
+            }
         },
         {
             path: '/driver',
             name: 'driver',
             component: Driver,
-            props: true
+            props: true,
+            meta: {
+                title: 'Tour | Fast Border Crossing',
+            }
         },
         {
             path: '/healthcheck',
             name: 'healthcheck',
             component: Healthcheck,
             props: true,
+            meta: {
+                title: 'Check | Fast Border Crossing',
+            }
         },
         {
             path: '*',
             name: 'notFound',
             component: NotFound,
+            meta: {
+                title: 'Not found | Fast Border Crossing',
+            }
         }
     ],
     mode: 'history'
+});
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    next()
 });
 
 Vue.config.productionTip = false
